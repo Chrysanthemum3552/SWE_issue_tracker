@@ -6,4 +6,7 @@ export default interface BoardListItem {
     viewCount: number;
     writeDatetime: string;
     writerName: string;
+    status: string;
+    recommand: string;
+    type: string;
 }
