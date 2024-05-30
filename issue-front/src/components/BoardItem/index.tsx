@@ -15,7 +15,7 @@ export default function BoardItem({ boardListItem }: Props) {
 
     const{issue_no, title, content}=boardListItem
     const{commentCount, viewCount}=boardListItem
-    const{writeDatetime, writerName, status, recommand, type}=boardListItem
+    const{writeDatetime, writerName, assignee, fixer, type, priority}=boardListItem
 
     // const navigator = useNavigate();
 
@@ -23,6 +23,15 @@ export default function BoardItem({ boardListItem }: Props) {
     //     navigator(issue_no);
     // }
 
+
+    let status = '';
+    if (assignee === '' && fixer === '') {
+        status = 'new';
+    } else if (assignee !== '' && fixer === '') {
+        status = 'assigned';
+    } else if (assignee !== '' && fixer !== '') {
+        status = 'resolved';
+    }
   return (
     <div className='board-list-item'>
         <div className='board-list-item-box'>
@@ -41,10 +50,10 @@ export default function BoardItem({ boardListItem }: Props) {
             </div>
             <div className='board-list-item-bottom'>
                 <div className='board-list-item-issue-type'>
-                    {`이슈유형 : ${type}`}
+                    {`이슈유형 : ${type}`}<br />{`우선순위 : ${priority}`}
                 </div>
                 <div className='board-list-item-recommand'>
-                    {recommand ? `추천 해결자 : ${recommand}` : '추천 해결자 : 없음'}
+                    {`담당자 : ${assignee}   해결자 : ${fixer}`}
                 </div>
                 <div className='board-list-item-counts'>
                     {`댓글 ${commentCount}   조회수 ${viewCount}`}

@@ -7,6 +7,9 @@ export default interface BoardListItem {
     writeDatetime: string;
     writerName: string;
     status: string;
-    recommand: string;
     type: string;
+    name: string;
+    fixer: string;
+    assignee: string;
+    priority: string
 }
