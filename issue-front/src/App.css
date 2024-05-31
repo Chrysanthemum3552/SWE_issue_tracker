@@ -1,3 +1,12 @@
+
+.icon-box {
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .icon-button {
 
     border-radius: 50% 50%;
@@ -33,3 +42,9 @@
 .expand-right-light-icon {
     background-image: url(assets/expand-right-light.png);
 }
+
+
+.logo-light-icon {
+    background-image: url(assets/logo-light.png);
+}
+
