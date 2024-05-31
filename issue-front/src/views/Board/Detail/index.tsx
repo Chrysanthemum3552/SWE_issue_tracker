@@ -4,6 +4,6 @@ import './style.css';
 //이슈 상세 화면//
 export default function BoardDetail() {
   return (
-    <div>index</div>
+    <div>{'이슈 상세 화면'}</div>
   )
 }

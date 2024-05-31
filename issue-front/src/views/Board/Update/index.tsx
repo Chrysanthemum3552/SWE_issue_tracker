@@ -6,6 +6,6 @@ import './style.css';
 
 export default function BoardUpadte() {
   return (
-    <div>index</div>
+    <div>{'//이슈수정//'}</div>
   )
 }

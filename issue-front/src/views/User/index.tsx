@@ -3,6 +3,6 @@ import './style.css';
 
 export default function User() {
   return (
-    <div>index</div>
+    <div>{'유저화면'}</div>
   )
 }
